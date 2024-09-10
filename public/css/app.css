@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #3AAFA9;
+    --secondary-color: #FEFFFF;
+    --accent-color: #17252A;
+}
+
+body {
+    font-family: 'Railway', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: var(--secondary-color);
+}
+
+.navbar-toggler {
+    border-color: transparent; /* Removes the border around the hamburger icon */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Button styling */
+
+.btn {
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Hero banner styling and animation */
+.hero-banner {
+    position: relative;
+    height: 100vh;
+    background-color: var(--primary-color)
+}
+
+.circle-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover; /* Image covers the frame without distortion */
+    border: 5px solid #fff; /* White border/frame */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); } /* Starts hidden and slightly higher */
+    100% { opacity: 1; transform: translateY(0); }  /* Ends fully visible and in the original position */
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.hero-content { 
+    animation: fadeIn 1s ease-out forwards; /* Makes the animation start quickly and end slowly. 'Forwards' retains final state of animation after it ends */
+    opacity: 0; /* Start hidden */
+    animation-delay: 0.5s; /* Optional: starts the animation after 0.5 seconds */
+    color: var(--secondary-color);
+}
+
+.circle-image {
+    animation: slideIn 1.5s ease-out forwards; /* Slide-in animation for hero image */
+    opacity: 0; /* Ensures image is hidden before animation starts */
+    animation-delay: 1s; /* Delay for staggered effect */
+}
+
+/* Typing Animation */
+.typing-animation {
+    border-right: .15em solid var(--accent-color); /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden; /* Hides text overflow */
+    max-width: 0; /* Initially hidden */
+    margin: 0 auto;
+    animation: typing 4s steps(30, end) forwards, blink-caret .75s step-end 5 forwards;
+}
+
+@keyframes typing {
+    from { max-width: 0; }
+    to { max-width: 65%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    60% { border-color: var(--accent-color); }
+}
+
+@keyframes final-caret-disappear {
+    0% { border-color: var(--accent-color); }
+    100% { border-color: transparent; }
+}
+

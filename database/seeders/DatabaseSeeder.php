@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // Register ProjectSeeder
         $this->call(ProjectSeeder::class);
+        $this->call(ImageSeeder::class);
     }
 }

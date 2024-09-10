@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title') | {{ env('APP_NAME')}}</title>
-    <!-- Bootstrap CSS -->
+    <title>@yield('title') | {{ env('APP_NAME') }}</title>
+    {{-- Font type --}}
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    {{-- Bootstrap CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body>
-    <header class="bg-light p-3">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="bg-light">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ route('home') }}">Portfolio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,11 +34,11 @@
             </div>
         </nav>
     </header>
-    <main class="container my-4">
-        @yield('content')
-    </main>
+
+    @yield('content')
+
     <footer class="bg-light text-center p-3">
-        <p>© 2024 {{ env('APP_NAME')}}. All rights reserved.</p>
+        <p>© 2024 {{ env('APP_NAME') }}. All rights reserved.</p>
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
