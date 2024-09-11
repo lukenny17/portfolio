@@ -47,7 +47,7 @@ class ImageSeeder extends Seeder
 
         // Portfolio
         $portfolioImageFiles = [
-            'weka/figure4.png',
+            'portfolio/hero.png',
         ];
 
         foreach ($portfolioImageFiles as $file) {

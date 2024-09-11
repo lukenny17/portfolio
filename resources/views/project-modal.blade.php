@@ -3,10 +3,11 @@
     aria-labelledby="projectModalLabel{{ $project->id }}" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="projectModalLabel{{ $project->id }}">{{ $project->name }}
+            <div class="modal-header justify-content-center">
+                <h5 class="modal-title text-center fw-bold" id="projectModalLabel{{ $project->id }}">{{ $project->name }}
                 </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body">
 
@@ -15,7 +16,7 @@
                     <div class="carousel-inner">
                         @foreach ($project->images as $index => $image)
                             <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                                <img src="{{ asset($image->path) }}" class="d-block w-100 shadow"
+                                <img src="{{ asset($image->path) }}" class="d-block w-100 shadow-sm modal-image"
                                     alt="{{ $project->name }}">
                             </div>
                         @endforeach
@@ -34,8 +35,7 @@
 
                 {{-- Project details --}}
                 <p class="mt-3">{{ $project->details }}</p>
-                <p class="mt-3"><strong>Technologies Used:</strong> {{ $project->technologies }}
-                </p>
+                <p class="mt-3"><strong>Technologies Used:</strong> {{ $project->technologies }}</p>
                 <p class="project-link mt-3">
                     {{-- 'blank' opens in a new tab; noopener noreferrer prevents new page from gaining access to original page window to mitigate phishing attacks --}}
                     <a href="{{ $project->url }}" target="_blank" rel="noopener noreferrer"><strong>Link</strong></a>

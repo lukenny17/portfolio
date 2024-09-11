@@ -206,6 +206,33 @@ section[id] {
     color: var(--primary-color);
 }
 
+/* Modal styling */
+.modal-title {
+    font-weight: bold; /* Make the title bold */
+    font-size: 1.5rem; /* Slightly increase the font size */
+    text-align: center; /* Center align the title */
+}
+
+.modal-image {
+    max-width: 95%; /* Shrink the image size slightly within the modal */
+    margin: 10px auto; /* Center image with some margin */
+    border-radius: 8px; /* Optional: Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add subtle shadow */
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Add a light border */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center; /* Center the title within the header */
+    border-bottom: none; /* Remove bottom border if needed */
+    position: relative; /* Allow for positioning of the close button */
+}
+
+.btn-close {
+    position: absolute; /* Position to the far right */
+    right: 10px; /* Adjust to fit design */
+}
+
 /* Contact form */
 .contact-section {
     padding: 60px 0; /* Vertical padding */
