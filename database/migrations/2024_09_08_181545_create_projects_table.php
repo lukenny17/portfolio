@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->text('details');
             $table->text('technologies');
+            $table->string('tags')->nullable();
             $table->boolean('is_featured')->default(false);
             $table->timestamps();
         });
