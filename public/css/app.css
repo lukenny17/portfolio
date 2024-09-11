@@ -1,7 +1,8 @@
 :root {
-    --primary-color: #3AAFA9;
-    --secondary-color: #FEFFFF;
-    --accent-color: #17252A;
+    --primary-color: #3aafa9;
+    --secondary-color: #feffff;
+    --accent-color: #17252a;
+    --third-color: white;
 }
 
 body {
@@ -16,6 +17,12 @@ body {
 .navbar-brand,
 .navbar-nav .nav-link {
     color: var(--secondary-color);
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.05); /* Slightly enlarge the link */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 .navbar-toggler {
@@ -31,11 +38,15 @@ section[id] {
     scroll-margin-top: 56px;
 }
 
-/* Button styling */
+/* Global Button Styling */
 .btn {
     color: var(--secondary-color);
     background-color: var(--accent-color);
     border: none;
+    border-radius: 4px; /* Standardize button shape */
+    padding: 10px 20px; /* Consistent padding */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 .btn:hover {
@@ -43,22 +54,69 @@ section[id] {
     color: var(--secondary-color);
 }
 
-.filter-button {
-    width: 150px; /* Set fixed width */
-    border: 2px solid var(--accent-color);
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
-}
+/* Specific Button Variations */
 
-.filter-button:hover {
+/* Filter Buttons */
+.filter-btn {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    border: none;
+    width: 150px; /* Set fixed width for uniformity */
+    padding: 10px 0;
+    margin-right: 5px;
+}
+
+.filter.button:last-child {
+    margin-right: 0; /* No extra space after last button */
+}
+
+.filter-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+/* Hero Button Styling */
+.hero-btn {
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    border: 2px solid var(--third-color); /* White border to match the hero section */
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Transition for hover effects */
+}
+
+.hero-btn:hover {
+    background-color: var(--accent-color); /* Invert colors on hover */
+    color: var(--third-color);
+    border-color: var(--third-color);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Contact Section Buttons */
+.contact-section .btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto; /* Center button */
+}
+
+/* Additional Button Variants */
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
 }
 
 /* Hero banner styling and animation */
 .hero-banner {
     position: relative;
     height: 100vh;
-    background-color: var(--primary-color)
+    background-color: var(--primary-color);
 }
 
 .circle-image {
@@ -68,6 +126,9 @@ section[id] {
     object-fit: cover; /* Image covers frame without distortion */
     border: 5px solid #fff; /* White border/frame */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+    animation: slideIn 1.5s ease-out forwards; /* Slide-in animation for hero image */
+    opacity: 0; /* Ensures image is hidden before animation starts */
+    animation-delay: 1s; /* Delay for staggered effect */
 }
 
 @keyframes fadeIn {
@@ -80,17 +141,11 @@ section[id] {
     100% { opacity: 1; transform: translateX(0); }
 }
 
-.hero-content { 
+.hero-content {
     animation: fadeIn 1s ease-out forwards; /* Makes the animation start quickly and end slowly. 'Forwards' retains final state of animation after it ends */
     opacity: 0; /* Start hidden */
     animation-delay: 0.5s; /* Starts the animation after 0.5 seconds */
     color: var(--secondary-color);
-}
-
-.circle-image {
-    animation: slideIn 1.5s ease-out forwards; /* Slide-in animation for hero image */
-    opacity: 0; /* Ensures image is hidden before animation starts */
-    animation-delay: 1s; /* Delay for staggered effect */
 }
 
 /* Typing Animation */
@@ -130,7 +185,7 @@ section[id] {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #fff; 
+    border: 5px solid #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -139,7 +194,7 @@ section[id] {
     .about-me .profile-image {
         display: none; /* Hide image on smaller screens */
     }
-    
+
     .about-me .col-md-8 {
         flex: 1 1 100%; /* Make text take full width */
         text-align: center; /* Center-align text */
@@ -160,11 +215,7 @@ section[id] {
     font-weight: bold;
 }
 
-.contact-section .btn {
-    width: 100%;
-    max-width: 200px;
-}
-
+/* Social Media Icons */
 .social-icon {
     width: 40px;
     height: 40px;
@@ -182,8 +233,7 @@ section[id] {
 }
 
 /* Footer */
-.Footer {
+.footer {
     background-color: var(--primary-color);
     color: white;
 }
-

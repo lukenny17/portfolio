@@ -14,7 +14,7 @@
                     <p class="lead mb-4">A portfolio showcasing my projects, skills, and journey into a new Software
                         Engineering career
                     </p>
-                    <a href="#projects" class="btn btn-primary btn-lg">Explore My Work</a>
+                    <a href="#projects" class="btn btn-primary btn-lg hero-btn">Explore My Work</a>
                 </div>
                 <div class='col-md-6'>
                     <img src="{{ asset('images/profilepic.JPEG') }}" class="img-fluid circle-image" alt="Hero Image">
@@ -56,10 +56,10 @@
 
         {{-- Filter Buttons --}}
         <div class="btn-group mb-4" role="group" aria-label="Filter projects">
-            <button type="button" class="btn btn-outline-primary filter-button" data-filter="all">All</button>
-            <button type="button" class="btn btn-outline-primary filter-button"
+            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="all">All</button>
+            <button type="button" class="btn btn-outline-primary filter-btn"
                 data-filter="development">Development</button>
-            <button type="button" class="btn btn-outline-primary filter-button" data-filter="data-analysis">Data
+            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="data-analysis">Data
                 Analysis</button>
         </div>
 
