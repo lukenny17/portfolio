@@ -19,7 +19,7 @@
                         <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                     </div>
                     <div class="text-end">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-custom">Send Message</button>
                     </div>
                 </form>
             </div>

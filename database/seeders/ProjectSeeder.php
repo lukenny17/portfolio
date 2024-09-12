@@ -26,7 +26,6 @@ class ProjectSeeder extends Seeder
         Project::create([
             'name' => 'HEAT Software Enhancement',
             'description' => 'Enhanced accessibility in HEAT software using Java, adding scalable UI components and improved usability features.',
-            'url' => 'https://example.com/portfolio',
             'details' => 'Expanded HEAT\'s functionality by implementing accessibility features such as scalable UI components, customizable colour schemes, and a new toolbar. Conducted thorough reviews of the existing software architecture, prioritising user stories for high-impact features. Ensured software reliability and usability through unit and functional testing. Managed the project using GitLab for version control, issue tracking, and documentation, resulting in achieving the top grade in the class for the project.',
             'technologies' => 'Java, Gitlab',
             'tags' => 'development',

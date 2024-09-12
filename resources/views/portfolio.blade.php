@@ -14,7 +14,7 @@
                     <p class="lead mb-4">A portfolio showcasing my projects, skills, and journey into a new Software
                         Engineering career
                     </p>
-                    <a href="#projects" class="btn btn-primary btn-lg hero-btn">Explore My Work</a>
+                    <a href="#projects" class="btn btn-custom hero-btn">Explore My Work</a>
                 </div>
                 <div class='col-md-6'>
                     <img src="{{ asset('images/profilepic.JPEG') }}" class="img-fluid circle-image" alt="Hero Image">
@@ -43,7 +43,7 @@
                         Looking for opportunities to create solutions that truly make an impact.
                     </p>
                     <p class="mt-3">
-                        <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                        <a href="#contact" class="btn btn-custom">Let's Connect</a>
                     </p>
                 </div>
             </div>
@@ -56,12 +56,11 @@
 
         {{-- Filter Buttons --}}
         <div class="btn-group mb-4" role="group" aria-label="Filter projects">
-            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="all">All</button>
-            <button type="button" class="btn btn-outline-primary filter-btn"
-                data-filter="development">Development</button>
-            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="data-analysis">Data
-                Analysis</button>
+            <button type="button" class="btn filter-btn" data-filter="all">All</button>
+            <button type="button" class="btn filter-btn" data-filter="development">Development</button>
+            <button type="button" class="btn filter-btn" data-filter="data-analysis">Data Analysis</button>
         </div>
+        
 
 
         <div class="container project-card-container">
@@ -81,7 +80,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">{{ $project->name }}</h5>
                                 <p class="card-text">{{ $project->description }}</p>
-                                <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                <button type="button" class="btn btn-custom mt-auto" data-bs-toggle="modal"
                                     data-bs-target="#projectModal{{ $project->id }}">
                                     Learn More
                                 </button>

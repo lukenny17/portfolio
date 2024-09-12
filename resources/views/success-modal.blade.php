@@ -7,7 +7,7 @@
                 <p>Thank you for reaching out! I will get back to you as soon as possible.</p>
             </div>
             <div class="modal-footer justify-content-center"> <!-- Center the button -->
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
